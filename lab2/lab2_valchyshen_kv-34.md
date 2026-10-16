@@ -74,7 +74,7 @@ NIL
 (defun is-in-list (elem lst)
   "Допоміжна рекурсивна функція для перевірки наявності елемента у списку."
   (cond ((null lst) nil)
-        ((equal elem (car lst)) t)
+        ((eql elem (car lst)) t) ; ЗАМІНЕНО equal на eql
         (t (is-in-list elem (cdr lst)))))
 
 (defun list-set-intersection (set1 set2)
